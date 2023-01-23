@@ -38,18 +38,36 @@ input.onButtonPressed(Button.B, function () {
             . . . . .
             `)
     }
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+})
+input.onGesture(Gesture.Shake, function () {
+    rps = randint(1, 3)
+    if (rps == 1) {
+        basic.showString("R")
+    } else if (rps == 2) {
+        basic.showString("P")
+    } else {
+        basic.showString("S")
+    }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     for (let index = 0; index < 2; index++) {
-        music.playMelody("D C A G B G D B ", 120)
+        music.playMelody("B A G A G F A C5 ", 120)
     }
 })
+let rps = 0
 let letter = 0
-basic.showString("HELLO NISCHAL")
+basic.showString("HELLO FRIEND !!")
 basic.showLeds(`
+    . . # . .
+    . . # . .
     # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
-    # # # # #
+    . . . . .
+    . . . . .
     `)
